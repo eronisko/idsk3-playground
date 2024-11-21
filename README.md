@@ -1,3 +1,16 @@
+# ID-SK v3 playground
+Created to test out new idsk3-frontend npm package
+
+## How to use
+```
+npm run dev
+```
+
+- [http://localhost:5174/v2] implements [IDSK v2](https://idsk2.gov.sk/)
+- [http://localhost:5174/v3] implements [IDSK v3](https://idsk3.gov.sk/)
+
+---
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
