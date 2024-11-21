@@ -1,33 +1,56 @@
-import { useState } from 'react'
-import reactLogo from '../assets/react.svg'
-import viteLogo from '/vite.svg'
-import './V3.css'
+import { useEffect } from 'react'
+import './V3.scss'
+import { initAll } from 'eronisko-idsk-frontend'
 
 function App() {
-    const [count, setCount] = useState(0)
+    useEffect(() => {
+        initAll()
+    }, [])
+
 
     return (
         <>
             <div>
-                <a href="https://vite.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo" />
-                </a>
-                <a href="https://react.dev" target="_blank">
-                    <img src={reactLogo} className="logo react" alt="React logo" />
-                </a>
-            </div>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
+
+                <button type="submit" className="govuk-button govuk-button__basic" data-module="govuk-button">
+                    Primary button
                 </button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
             </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>
+            <div>
+                <div className="govuk-accordion" data-module="govuk-accordion" id="with-descriptions">
+                    <div className="govuk-accordion__section">
+                        <div className="govuk-accordion__section-header ">
+                            <h2 className="govuk-accordion__section-heading">
+                                <span className="govuk-accordion__section-button" id="with-descriptions-heading-1">
+                                    Názov
+                                </span>
+                            </h2>
+                        </div>
+                        <div id="with-descriptions-content-1" className="govuk-accordion__section-content">
+                            <p className="govuk-body">
+                                We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="govuk-accordion__section">
+                        <div className="govuk-accordion__section-header ">
+                            <h2 className="govuk-accordion__section-heading">
+                                <span className="govuk-accordion__section-button" id="with-descriptions-heading-2">
+                                    Názov
+                                </span>
+                            </h2>
+                            <div className="govuk-accordion__section-summary govuk-body" id="with-descriptions-summary-2">
+                                Popis
+                            </div>
+                        </div>
+                        <div id="with-descriptions-content-2" className="govuk-accordion__section-content">
+                            <p className="govuk-body">
+                                We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
