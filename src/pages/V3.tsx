@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import './V3.scss'
-import { initAll } from 'eronisko-idsk-frontend'
+import { initAll } from '@id-sk/frontend'
 
 function App() {
     useEffect(() => {
